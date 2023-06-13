@@ -1,13 +1,13 @@
-import java.lang.String;
-import java.util.Arrays;
+import java.lang.*;
 
 public class Main {
     public static void main(String[] args) {
-        int a=67;
-        int b=9;
-        System.out.println(a+b);
-        System.out.println(a-b);
-        float d= (float)5/(float)4;
-        System.out.println(d);
+        final float pi = 3.14F;
+        float r = 5.43F;
+        double d = r+2*pi;
+        int x = (int)d;
+        String s = "10.0";
+        System.out.println(x);
+        System.out.println(Double.parseDouble(s));
     }
 }
