@@ -7,6 +7,7 @@ public class Main {
             float price=67.82F;
             double tax=8.8765;
             char str='P';
+
             boolean isfunction=true;
             System.out.println(tax);
         }
