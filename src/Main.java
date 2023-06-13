@@ -4,20 +4,29 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("number : ");
-        int number = sc.nextInt();
-        if(number % 3 ==0 && number % 5 ==0){
-            System.out.println("FizzBuzz");
+        for(int i=0;i<10;i++){//for loop
+            System.out.println(i);
         }
-        else if(number % 3 ==0){
-            System.out.println("Buzz");
+        int[] array = {1, 2, 3, 4, 5, 6, 6};
+        for(int i:array){//for-each loop
+            System.out.println(i);
         }
-        else if(number % 5 ==0){
-            System.out.println("Fizz");
+        int i=0;
+        while(i<10){//while
+            System.out.println(i+" time");
+            i++;
         }
-        else{
-            System.out.println(number);
+        do{//do...while
+            System.out.println("Time "+i);
+            i++;
+        } while(i>0);
+
+        while(true){//runs forever
+            System.out.println("hello");
+            if(i==50){
+                break;//break the loop
+            }
+            i+=1;
         }
     }
 }
