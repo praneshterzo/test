@@ -1,14 +1,12 @@
-import java.awt.*;
-import java.util.Date;
+import java.lang.String;
+import java.util.Arrays;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-            Point point1=new Point(1,2);
-            Point point2 = point1;
-            System.out.println(point2);
-            point1.x=100;
-        System.out.println(point2);
-        }
+        int[][] nums = new int[2][2];
+        nums[1][0] = 99;
+        nums[1][1] = 42;
+        System.out.println(Arrays.deepToString(nums));
+        System.out.println(nums[0].length);
     }
+}
