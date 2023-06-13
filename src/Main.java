@@ -4,29 +4,31 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        for(int i=0;i<10;i++){//for loop
-            System.out.println(i);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Principle : ");
+        int principle = sc.nextInt();
+        while(principle<1000 || principle>1_000_000){
+            System.out.println("Enter amount between the range $1,000 to $1m");
+            System.out.print("Principle : ");
+            principle = sc.nextInt();
         }
-        int[] array = {1, 2, 3, 4, 5, 6, 6};
-        for(int i:array){//for-each loop
-            System.out.println(i);
+        System.out.print("\nRate of interest : ");
+        float rateOfInterest = sc.nextFloat();
+        while(rateOfInterest<0 || rateOfInterest>10){
+            System.out.println("Enter value between the range 0.1 to 10");
+            System.out.print("\nRate of interest : ");
+            rateOfInterest = sc.nextFloat();
         }
-        int i=0;
-        while(i<10){//while
-            System.out.println(i+" time");
-            i++;
+        rateOfInterest=rateOfInterest/100/12;
+        System.out.print("\nno. of years : ");
+        int noOfYears = sc.nextInt();
+        while(noOfYears<1|| noOfYears>30){
+            System.out.println("Enter value between the range 1 to 30");
+            System.out.print("\nno. of years : ");
+            noOfYears = sc.nextInt();
         }
-        do{//do...while
-            System.out.println("Time "+i);
-            i++;
-        } while(i>0);
-
-        while(true){//runs forever
-            System.out.println("hello");
-            if(i==50){
-                break;//break the loop
-            }
-            i+=1;
-        }
+        noOfYears=noOfYears*12;
+        double mortgage = ( principle * rateOfInterest * Math.pow( (1+rateOfInterest), noOfYears))/(Math.pow((1+rateOfInterest), noOfYears) - 1);
+        System.out.println("\nMortgage : "+mortgage);
     }
 }
